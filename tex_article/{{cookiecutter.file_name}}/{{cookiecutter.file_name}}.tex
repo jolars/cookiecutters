@@ -1,0 +1,31 @@
+\input{tex/preamble.tex}
+\input{tex/macros.tex}
+
+% title block
+\title{{'{' + cookiecutter.title + '}'}}
+
+{%- if cookiecutter.single_author == "yes" %}
+\author{{'{' + cookiecutter.author + '}'}}
+\affil{{'{' + cookiecutter.affiliation + '\\\\' + '\n  ' +
+  '\\href{mailto:' + cookiecutter.email + 
+  '}{\\nolinkurl{' + cookiecutter.email + '}}}'}}
+
+{%- elif cookiecutter.single_author == "no" %}
+\author[1,*]{{'{' + cookiecutter.author + '}'}}
+\affil[1]{{'{' + cookiecutter.affiliation + '}'}}
+\affil[*]{Corresponding author:
+  \href{mailto:{{cookiecutter.email}}}{\nolinkurl{{'{' + cookiecutter.email + '}'}}}
+}
+
+{%- endif %}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+
+
+%\printbibliography
+
+\end{document}

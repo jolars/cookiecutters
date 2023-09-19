@@ -1,0 +1,31 @@
+\input{tex/preamble}
+\input{tex/beamer-config}
+\input{tex/macros}
+
+% title block
+\title{{'{' + cookiecutter.title + '}'}}
+\subtitle{{'{' + cookiecutter.subtitle + '}'}}
+
+{%- if cookiecutter.single_author == "yes" %}
+\author{{'{' + cookiecutter.author + '}'}}
+\institute{{'{' + cookiecutter.affiliation + '}'}}
+
+{%- elif cookiecutter.single_author == "no" %}
+\author[shortname]{{'{' + cookiecutter.author + '\\inst{1}}'}}
+\institute[shortinst]{
+  \inst{1}{{'{' + cookiecutter.affiliation + '}' }}
+}
+
+{%- endif %}
+\date{\today}
+\titlegraphic{\includegraphics{figures/logo.pdf}}
+
+\begin{document}
+\frame[noframenumbering,plain]{\titlepage}
+
+% \begin{frame}[allowframebreaks]{References}
+%   \bibliographytrue
+%   \printbibliography[heading=none]
+% \end{frame}
+
+\end{document}

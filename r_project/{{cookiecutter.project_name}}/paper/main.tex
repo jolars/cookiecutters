@@ -1,0 +1,135 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode,pdfusetitle}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+
+\documentclass[english,a4paper]{article}
+
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath,amsthm,mathtools,isomath}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp} % provide euro and other symbols
+\usepackage{babel}
+
+\usepackage{upquote} %straight quotes in verbatim environments
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+
+\usepackage{xcolor}
+\usepackage{xurl}
+\usepackage{bookmark}
+\usepackage{csquotes}
+
+\usepackage{listings}
+
+\lstset{
+	basicstyle=\ttfamily, % print whole listing small
+	%keywordstyle=\color{black}\bfseries\underbar, % underlined bold black keywords
+	%commentstyle=\color{grey}, % white comments
+	keepspaces = true % no special string spaces
+}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=Navy,
+	filecolor=Navy,
+	citecolor=Navy,
+	urlcolor=Navy
+}
+\usepackage{cleveref}
+
+\usepackage{longtable,booktabs}
+
+\usepackage{etoolbox}
+
+% nice tables out of csv files
+\usepackage{csvsimple}
+
+% format units nicely
+\usepackage{siunitx}
+
+% Allow footnotes in longtable head/foot
+\usepackage{footnotehyper}
+\makesavenoteenv{longtable}
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+% % tikz and pgfplots
+% \usepackage{pgfplots}
+% \pgfplotsset{width=7cm,compat=1.16}
+% \usepgfplotslibrary{external}
+% \tikzexternalize
+
+\usepackage{pdfpages}
+\usepackage{algorithm,algpseudocode}
+
+% bibliography
+\makeatletter
+\def\blx@nowarnpolyglossia{}
+\makeatother
+\usepackage[style=authoryear,backend=biber]{biblatex}
+\addbibresource{main.bib}
+
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+
+% operators
+\DeclareMathOperator{\sign}{sign}
+\renewcommand{\vec}{\vectorsym}
+\newcommand{\mat}{\matrixsym}
+\newcommand{\du}{\mathrm{d}}
+
+\title{Title}
+
+\usepackage[]{authblk}
+% \renewcommand\Affilfont{\itshape\small}
+
+\author[shortname]{\texorpdfstring{\alert{Johan Larsson}}{Johan Larsson}\inst{1,*}, Małgorzata Bogdan\inst{1,2}, and Jonas Wallin\inst{1}}
+\institute[shortinst]{\inst{1} Department of Statistics, Lund University\\
+	\inst{2} Department of Mathematics, University of Wroclaw\\
+	\inst{*} \href{mailto:johan.larsson@stat.lu.se}{\texttt{johan.larsson@stat.lu.se}}}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\section{Introduction}
+\label{introduction}
+
+Here is a reference~\parencite{larsson2020c}. Next is an example of using
+csvsimple~(\Cref{tab:table1}).
+
+\begin{table}[hbtp]
+	\caption{A caption.}
+	\label{tab:table1}
+	\csvreader[
+		tabular={lS[table-format=0.4]},
+		before reading=\footnotesize\centering\sisetup{round-mode=figures, round-precision=3},
+		table head=\toprule name & {value} \\\midrule,
+		table foot=\bottomrule
+	]%
+	{tables/table1.csv}%
+	{name=\name, mu=\mu}%
+	{\name & \mu}
+\end{table}
+
+And here comes a figure~(\Cref{fig:figure1}).
+
+\begin{figure}[hbtp]
+	\centering
+	\includegraphics{figures/plot.pdf}
+	\caption{A figure caption.}
+	\label{fig:figure1}
+\end{figure}
+
+\printbibliography
+
+\end{document}

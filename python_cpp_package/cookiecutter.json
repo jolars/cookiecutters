@@ -1,0 +1,12 @@
+{
+  "package_name": "pythonpackage",
+  "package_description": "Short Description of What Package Is About (in Title Case)",
+  "author": "Johan Larsson",
+  "email": "johanlarsson@outlook.com",
+  "year" : "2021",
+  "orcid": "0000-0002-4029-5945",
+  "github_user": "jolars",
+  "license": ["GNU GPL v3.0", "BSD-3", "MIT", "Apache Software License 2.0"],
+  "sphinx_theme": "sphinx_rtd_theme",
+  "_copy_without_render": ["*.pdf", "*.so", "*.o", "*.png", "*.jpg"]
+}

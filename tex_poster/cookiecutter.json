@@ -1,0 +1,15 @@
+{
+    "slug": "poster",
+    "title": "Title",
+    "author" : "Johan Larsson",
+    "email" : "johan.larsson@stat.lu.se",
+    "subject": "statistics",
+    "keywords": "statistics, machine learning",
+    "size": "a0",
+    "_copy_without_render": [
+        "*.pdf",
+        "*.bib",
+        "*.png",
+        "*.jpg"
+    ]
+}
