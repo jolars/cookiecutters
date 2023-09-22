@@ -1,15 +1,18 @@
 {
-    "title": "Title",
-    "subtitle": "Subtitle",
-    "author" : "Johan Larsson",
-    "email" : "johan.larsson@stat.lu.se",
-    "affiliation": "Department of Statistics, Lund University",
-    "single_author" : ["yes", "no"],
-    "file_name": "presentation",
-    "_copy_without_render": [
-        "*.pdf",
-        "*.bib",
-        "*.png",
-        "*.jpg"
-    ]
+  "slug": "a_presentation",
+  "title": "Title",
+  "subtitle": "Subtitle",
+  "author": "Johan Larsson",
+  "email": "johan.larsson@stat.lu.se",
+  "affiliation": "Department of Statistics, Lund University",
+  "single_author": [
+    "yes",
+    "no"
+  ],
+  "_copy_without_render": [
+    "*.pdf",
+    "*.bib",
+    "*.png",
+    "*.jpg"
+  ]
 }

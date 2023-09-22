@@ -1,3 +1,5 @@
+{% raw %}
+
 \raggedbottom
 
 \setbeamertemplate{part page}{
@@ -19,9 +21,9 @@
   \end{beamercolorbox}
 }
 
-\AtBeginPart{\frame{\partpage}}
+\AtBeginPart{\frame{\partpage} }
 \AtBeginSection{\ifbibliography\else\frame{\sectionpage}\fi}
-\AtBeginSubsection{\frame{\subsectionpage}}
+\AtBeginSubsection{\frame{\subsectionpage} }
 
 \usecolortheme{dove}
 \usefonttheme{professionalfonts}
@@ -43,3 +45,5 @@
 \setbeamerfont{framesubtitle}{size=\small}
 \setbeamertemplate{headline}{\vskip4ex}
 \beamertemplatenavigationsymbolsempty
+
+{% endraw %}

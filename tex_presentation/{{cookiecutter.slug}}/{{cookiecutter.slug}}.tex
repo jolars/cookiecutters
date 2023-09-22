@@ -2,6 +2,10 @@
 \input{tex/beamer-config}
 \input{tex/macros}
 
+% bibliography
+\usepackage[citestyle=authoryear]{biblatex}
+\addbibresource{{'{' + cookiecutter.slug + '.bib}'}}
+
 % title block
 \title{{'{' + cookiecutter.title + '}'}}
 \subtitle{{'{' + cookiecutter.subtitle + '}'}}
@@ -13,7 +17,7 @@
 {%- elif cookiecutter.single_author == "no" %}
 \author[shortname]{{'{' + cookiecutter.author + '\\inst{1}}'}}
 \institute[shortinst]{
-  \inst{1}{{'{' + cookiecutter.affiliation + '}' }}
+\inst{1}{{'{' + cookiecutter.affiliation + '}' }}
 }
 
 {%- endif %}

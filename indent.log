@@ -1,0 +1,59 @@
+INFO:  latexindent version 3.20.1, 2023-01-07, a script to indent .tex files
+       latexindent lives here: /home/gerd-jln/.local/share/nvim/mason/packages/latexindent/
+       Fri Sep 22 10:31:21 2023
+       Reading input from STDIN
+INFO:  Processing switches:
+INFO:  Directory for backup files and indent.log:
+       .
+INFO:  YAML settings read: defaultSettings.yaml
+       Reading defaultSettings.yaml from /home/gerd-jln/.local/share/nvim/mason/packages/latexindent/defaultSettings.yaml
+       Reading defaultSettings.yaml (2nd attempt) from /home/gerd-jln/.local/share/nvim/mason/packages/latexindent/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
+       and then, if necessary, /home/gerd-jln/.local/share/nvim/mason/packages/latexindent/LatexIndent/defaultSettings.yaml
+INFO:  YAML reading settings
+       The config file in "/home/gerd-jln/.indentconfig.yaml" will be read
+       Reading path information from /home/gerd-jln/.indentconfig.yaml
+       ---
+       paths:
+         - /home/gerd-jln/.latexindent.yaml
+
+INFO:  -l switch used without filename, will search for the following files in turn:
+       localSettings.yaml,latexindent.yaml,.localSettings.yaml,.latexindent.yaml
+INFO:  YAML settings read: -l switch
+       Multiple localSettings found, separated by commas:
+       localSettings.yaml, latexindent.yaml, .localSettings.yaml, .latexindent.yaml
+WARN:  yaml file not found: localSettings.yaml not found. Proceeding without it.
+WARN:  yaml file not found: latexindent.yaml not found. Proceeding without it.
+WARN:  yaml file not found: .localSettings.yaml not found. Proceeding without it.
+WARN:  yaml file not found: .latexindent.yaml not found. Proceeding without it.
+INFO:  YAML settings, reading from the following files:
+       Reading USER settings from /home/gerd-jln/.latexindent.yaml
+       ---
+       defaultIndent: '  '
+       replacements:
+         -
+           substitution: "s/\\$\\$\n  (.*?)\n  \\$\\$/\\\\[$1\\\\]/sgx"
+         -
+           substitution: "s/\\$\n  (.*?)\n  \\$/\\\\($1\\\\)/sgx"
+       specialBeginEnd:
+         leftRightCurly:
+           begin: \\left\\{
+           end: \\right\\}
+           lookForThis: '1'
+         leftRightParen:
+           begin: \\left\(
+           end: \\right\)
+           lookForThis: '1'
+         leftRightSquare:
+           begin: \\left\[
+           end: \\right\]
+           lookForThis: '1'
+
+INFO:  Phase 1: searching for objects
+INFO:  Phase 2: finding surrounding indentation
+INFO:  Phase 3: indenting objects
+INFO:  Phase 4: final indentation check
+INFO:  Output routine:
+       Not outputting to file; see -w and -o switches for more options.
+       --------------
+INFO:  Please direct all communication/issues to:
+        https://github.com/cmhughes/latexindent.pl
