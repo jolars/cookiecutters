@@ -1,5 +1,5 @@
-"""Tests for {{cookiecutter.package_name}}."""
+"""Tests for {{cookiecutter.slug}}."""
 
 def test_bar():
-    from {{cookiecutter.package_name}} import bar
+    from {{cookiecutter.slug}} import bar
     assert bar(1, 2) == 3
