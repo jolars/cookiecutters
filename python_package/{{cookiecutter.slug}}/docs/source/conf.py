@@ -9,7 +9,7 @@ from {{cookiecutter.slug}} import __version__  # noqa: E402
 
 # Project information
 project = "{{cookiecutter.slug}}"
-copyright = "{{cookiecuter.year}}, {{cookiecutter.author}}"
+copyright = "{{cookiecutter.year}}, {{cookiecutter.author}}"
 author = "{{cookiecutter.author}}"
 release = __version__
 
