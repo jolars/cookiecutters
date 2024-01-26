@@ -1,1 +1,1 @@
-.. automodule:: {{cookiecutter.package_name}}
+.. automodule:: {{cookiecutter.slug}}
