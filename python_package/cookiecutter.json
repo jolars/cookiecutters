@@ -11,6 +11,7 @@
     "*.o",
     "*.png",
     "*.jpg",
-    ".github/*"
+    ".github/*",
+    "docs/source/_templates/class.rst"
   ]
 }
