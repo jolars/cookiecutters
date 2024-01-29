@@ -3,26 +3,16 @@
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 
-\documentclass[10pt,ignorenonframetext]{beamer}
+\documentclass[10pt]{beamer}
+
+\usetheme{moloch}
 
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath,mathtools,amsthm}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{textcomp} % provide euro and other symbols
+\usepackage{textcomp}
 
-\usepackage{pgfpages}
-
-\usepackage{multirow}
-\usepackage{csvsimple}
-\usepackage{siunitx}
-
-% prevent slide breaks in the middle of a paragraph
-\widowpenalties 1 10000
-\raggedbottom
-
-% Use upquote if available, for straight quotes in verbatim environments
-\usepackage{upquote}
+\usepackage{upquote} % straight quotes in verbatim environments
 \usepackage[]{microtype}
 \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
 
@@ -30,6 +20,7 @@
 \usepackage{xurl} % add URL line breaks if available
 \usepackage{bookmark}
 \usepackage{hyperref}
+
 \hypersetup{%
   colorlinks = true,
   linkcolor  = DarkSlateBlue,
@@ -38,20 +29,6 @@
   urlcolor   = DarkSlateBlue
 }
 
-% tikz and pgfplots stuff
-\usepackage{tikz}
-\usetikzlibrary{arrows,shapes,positioning,intersections}
-\usepackage{pgfplots}
-\usepgfplotslibrary{external,colormaps}
-\pgfplotsset{width=7cm,compat=1.11}
-%\tikzexternalize
-
-%\usepackage{subfig}
-\usepackage{subcaption}
-\usepackage{algorithm,algpseudocode}
 \usepackage{booktabs}
-
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
 {% endraw %}
