@@ -1,0 +1,19 @@
+name = "{{cookiecutter.slug}}"
+uuid = "e3f974f6-674d-4b8e-a3d1-5850677db852"
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}> and contributors"]
+version = "0.0.0"
+
+[deps]
+FilePathsBase = "48062228-2e41-5def-b9a4-89aafe57970f"
+
+[compat]
+julia = "1.6"
+Test = "1.6"
+Aqua = "0.8"
+
+[extras]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Aqua", "Test"]

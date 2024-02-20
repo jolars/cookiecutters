@@ -1,0 +1,11 @@
+{
+  "slug": "Pkg",
+  "description": "Short Description of What Package Is About (in Title Case)",
+  "author": "Johan Larsson",
+  "email": "johanlarsson@outlook.com",
+  "year": "2024",
+  "github_user": "jolars",
+  "_copy_without_render": [
+    "*.pdf"
+  ]
+}
