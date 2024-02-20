@@ -1,8 +1,62 @@
-\input{tex/preamble}
-\input{tex/macros}
+{% raw %}
+\PassOptionsToPackage{unicode,pdfusetitle}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+
+\documentclass[10pt]{beamer}
+
+\usetheme{moloch}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{page number in head/foot}[appendixframenumber]
+
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath,mathtools,amsthm}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+
+\usepackage{upquote} % straight quotes in verbatim environments
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+
+\usepackage{xcolor}
+\usepackage{xurl} % add URL line breaks if available
+\usepackage{bookmark}
+\usepackage{hyperref}
+
+\hypersetup{%
+  colorlinks = true,
+  linkcolor  = mLightGreen,
+  filecolor  = mLightGreen,
+  citecolor  = mLightGreen,
+  urlcolor   = mLightGreen
+}
+\usepackage{cleveref}
+
+%% subfigures
+% \usepackage{subcaption}
+
+
+% % algorithms
+% \usepackage[ruled,vlined]{algorithm2e}
+% \resetcounteronoverlays{algocf}
+
+\usepackage{booktabs}
+
+% operators
+\DeclareMathOperator*{\argmax}{arg\,max}
+
+% macros
+\newcommand{\pkg}[1]{\textsf{#1}}
+\renewcommand{\vec}{\vectorsym}
+\newcommand{\mat}{\matrixsym}
+\newcommand{\du}{\mathrm{d}}
+
+\date{\today}
+\titlegraphic{\includegraphics{figures/logo.pdf}}
+{% endraw %}
 
 % % bibliography
-% \usepackage[citestyle=authoryear]{biblatex}
+% \usepackage[style=authoryear]{biblatex}
 % \addbibresource{{'{' + cookiecutter.slug + '.bib}'}}
 
 % title block
@@ -18,17 +72,34 @@
 \institute[shortinst]{
 \inst{1}{{'{' + cookiecutter.affiliation + '}' }}
 }
-
 {%- endif %}
-\date{\today}
-\titlegraphic{\includegraphics{figures/logo.pdf}}
 
+{% raw %}
 \begin{document}
-\frame[noframenumbering,plain]{\titlepage}
 
+\maketitle
+
+% \begin{frame}[c]
+%   \frametitle{Overview}
+%
+%   \tableofcontents
+% \end{frame}
+
+\begin{frame}[c]
+  \frametitle{title}
+
+  Hello, world!
+\end{frame}
+
+% \begin{frame}[standout]
+%   Thank you!
+% \end{frame}
+
+% \appendix
+% 
 % \begin{frame}[allowframebreaks]{References}
-%   \bibliographytrue
 %   \printbibliography[heading=none]
 % \end{frame}
 
 \end{document}
+{% endraw %}
