@@ -1,4 +1,4 @@
-{% raw %}
+{% raw -%}
 \PassOptionsToPackage{unicode,pdfusetitle}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
@@ -34,26 +34,15 @@
 %% subfigures
 % \usepackage{subcaption}
 
-
 % % algorithms
 % \usepackage[ruled,vlined]{algorithm2e}
 % \resetcounteronoverlays{algocf}
 
 \usepackage{booktabs}
 
-% operators
-\DeclareMathOperator*{\argmax}{arg\,max}
-
-% macros
-\newcommand{\pkg}[1]{\textsf{#1}}
-\renewcommand{\vec}{\vectorsym}
-\newcommand{\mat}{\matrixsym}
-\newcommand{\du}{\mathrm{d}}
-
 \date{\today}
 \titlegraphic{\includegraphics{figures/logo.pdf}}
 {% endraw %}
-
 % % bibliography
 % \usepackage[style=authoryear]{biblatex}
 % \addbibresource{{'{' + cookiecutter.slug + '.bib}'}}
@@ -72,6 +61,8 @@
 \inst{1}{{'{' + cookiecutter.affiliation + '}' }}
 }
 {%- endif %}
+
+\input{tex/macros.tex}
 
 {% raw %}
 \begin{document}
