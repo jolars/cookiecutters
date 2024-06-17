@@ -1,9 +1,9 @@
 % operators
 \DeclareMathOperator*{\argmax}{arg\,max}
 \DeclareMathOperator*{\argmin}{arg\,min}
-\DeclareMathOperator{\E}{\text{E}}
-\DeclareMathOperator{\var}{var}
-\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\cov}{Cov}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\range}{range}
@@ -11,11 +11,26 @@
 \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\card}{card}
 \DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator{\st}{S}
+\DeclareMathOperator{\normal}{Normal}
+\DeclareMathOperator{\fnormal}{FoldedNormal}
+\DeclareMathOperator{\bernoulli}{Bernoulli}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\mse}{MSE}
+\DeclareMathOperator{\risk}{R}
 
-% commands
-\renewcommand{\vec}{\vectorsym}
-\newcommand{\mat}{\matrixsym}
-\newcommand{\du}{\mathrm{d}}
+\DeclareMathOperator{\pdf}{\phi}
+\DeclareMathOperator{\cdf}{\Phi}
+
+\renewcommand{\vec}{\boldsymbol}
+\newcommand{\mat}{\boldsymbol}
+\newcommand*\du{\mathop{}\!\mathrm{d}}
+\newcommand{\T}{\mathsf{T}}
+% \newcommand{\ones}{\vectorsym{1}}
+\newcommand{\ones}{\boldsymbol{1}}
+% \newcommand{\T}{\intercal}
+% \newcommand{\T}[1]{{1}^{\mathsf{T}}}
+\newcommand{\ind}[1]{\operatorname{I}_{#1}}
 
 % environments
 \theoremstyle{plain}
