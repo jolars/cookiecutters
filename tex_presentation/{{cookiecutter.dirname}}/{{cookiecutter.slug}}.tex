@@ -51,8 +51,12 @@
 % \addbibresource{{'{' + cookiecutter.slug + '.bib}'}}
 
 % title block
+{%- if cookiecutter.title != "" %}
 \title{{'{' + cookiecutter.title + '}'}}
+{%- endif %}
+{%- if cookiecutter.subtitle != "" %}
 \subtitle{{'{' + cookiecutter.subtitle + '}'}}
+{%- endif %}
 
 {%- if cookiecutter.single_author == "yes" %}
 \author{{'{' + cookiecutter.author + '}'}}
@@ -67,7 +71,7 @@
 
 \input{tex/macros.tex}
 
-{% raw %}
+{%- raw %}
 \begin{document}
 
 \maketitle

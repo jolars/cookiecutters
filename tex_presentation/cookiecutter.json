@@ -1,10 +1,11 @@
 {
-  "slug": "a_presentation",
+  "slug": "a-presentation",
+  "dirname": "date-a-presentation",
   "title": "Title",
-  "subtitle": "Subtitle",
+  "subtitle": "",
   "author": "Johan Larsson",
-  "email": "johan.larsson@stat.lu.se",
-  "affiliation": "Department of Statistics, Lund University",
+  "email": "jola@math.ku.dk",
+  "affiliation": "Department of Mathematical Sciences, University of Copenhagen",
   "single_author": [
     "yes",
     "no"
