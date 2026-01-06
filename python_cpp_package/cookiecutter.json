@@ -1,6 +1,7 @@
 {
   "project_name": "MyPkg",
   "project_slug": "mypkg",
+  "dir_name": "mypkg",
   "description": "Short description of the project.",
   "author": "Johan Larsson",
   "email": "johan@jolars.co",
