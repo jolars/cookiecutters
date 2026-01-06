@@ -1,13 +1,13 @@
 # API Documentation
 
 ```{eval-rst}
-.. currentmodule:: {{cookiecutter.package_name}}
+.. currentmodule:: {{cookiecutter.project_slug}}
 ```
 
 ## Classes
 
 ```{eval-rst}
-.. currentmodule::  {{cookiecutter.package_name}}
+.. currentmodule::  {{cookiecutter.project_slug}}
 
 .. autosummary::
    :toctree: generated

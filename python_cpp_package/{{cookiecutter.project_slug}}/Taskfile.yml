@@ -40,4 +40,4 @@ tasks:
   autodoc:
     desc: Auto-build documentation on changes
     cmds:
-      - sphinx-autobuild docs/source docs/build --watch {{ cookiecutter.package_name }}
+      - sphinx-autobuild docs/source docs/build --watch {{ cookiecutter.project_slug }}

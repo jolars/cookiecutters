@@ -27,13 +27,13 @@
         "replacements": [
           {
             "files": [
-              "{{cookiecutter.package_name}}/__init__.py"
+              "{{cookiecutter.project_slug}}/__init__.py"
             ],
             "from": "__version__ = \".*\"",
             "to": "__version__ = \"${nextRelease.version}\"",
             "results": [
               {
-                "file": "{{cookiecutter.package_name}}/__init__.py",
+                "file": "{{cookiecutter.project_slug}}/__init__.py",
                 "hasChanged": true,
                 "numMatches": 1,
                 "numReplacements": 1
@@ -66,7 +66,7 @@
         "message": "chore(release): release ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
         "assets": [
           "pyproject.toml",
-          "{{cookiecutter.package_name}}/__init__.py",
+          "{{cookiecutter.project_slug}}/__init__.py",
           "CHANGELOG.md"
         ]
       }
