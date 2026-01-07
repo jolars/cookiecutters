@@ -11,6 +11,8 @@ on:
     paths:
       - "tex_presentation/**"
       - ".github/workflows/test-tex-presentation.yml"
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday at midnight UTC
   workflow_dispatch:
 
 jobs:

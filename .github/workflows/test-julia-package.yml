@@ -11,6 +11,8 @@ on:
     paths:
       - "julia_package/**"
       - ".github/workflows/test-julia-package.yml"
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday at midnight UTC
   workflow_dispatch:
 
 jobs:

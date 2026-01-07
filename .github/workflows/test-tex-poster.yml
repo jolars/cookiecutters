@@ -11,6 +11,8 @@ on:
     paths:
       - "tex_poster/**"
       - ".github/workflows/test-tex-poster.yml"
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday at midnight UTC
   workflow_dispatch:
 
 jobs:

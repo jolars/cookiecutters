@@ -11,6 +11,8 @@ on:
     paths:
       - "tex_article/**"
       - ".github/workflows/test-tex-article.yml"
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday at midnight UTC
   workflow_dispatch:
 
 jobs:
