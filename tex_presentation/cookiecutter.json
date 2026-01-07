@@ -1,6 +1,9 @@
 {
-  "slug": "a-presentation",
-  "dirname": "date-a-presentation",
+  "project_name": "A Presentation",
+  "project_slug": "a-presentation",
+  "dir_name": "date-a-presentation",
+  "github_user": "jolars",
+  "github_repo": "a-presentation",
   "title": "Title",
   "subtitle": "",
   "author": "Johan Larsson",

@@ -1,10 +1,13 @@
 {
-  "slug": "pkg",
+  "project_name": "Pkg",
+  "project_slug": "pkg",
+  "dir_name": "pkg",
+  "github_user": "jolars",
+  "github_repo": "pkg",
   "description": "Short Description of What Package Is About (in Title Case)",
   "author": "Johan Larsson",
   "email": "johanlarsson@outlook.com",
-  "year": "2024",
-  "github_user": "jolars",
+  "year": "2026",
   "_copy_without_render": [
     "*.pdf",
     "*.so",

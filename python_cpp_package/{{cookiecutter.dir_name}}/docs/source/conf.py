@@ -79,7 +79,7 @@ nb_execution_mode = "auto"
 linkcode_resolve = make_linkcode_resolve(
     "{{cookiecutter.project_slug}}",
     (
-        "https://github.com/{{cookiecutter.gh_user}}/{{cookiecutter.gh_repo}}/blob/{revision}/{package}/{path}#L{lineno}"
+        "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/blob/{revision}/{package}/{path}#L{lineno}"
     ),
 )
 

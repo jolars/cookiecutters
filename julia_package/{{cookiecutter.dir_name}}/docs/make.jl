@@ -1,5 +1,5 @@
 using Documenter
-using {{cookiecutter.slug}}
+using {{cookiecutter.project_slug}}
 
 # Copy CHANGELOG.md to docs/src/CHANGELOG.md
 cp(
@@ -9,11 +9,11 @@ cp(
 )
 
 makedocs(
-  sitename="{{cookiecutter.slug}}",
+  sitename="{{cookiecutter.project_name}}",
   format=Documenter.HTML(
     assets=["assets/favicon.ico"],
   ),
-  modules=[{{cookiecutter.slug}}],
+  modules=[{{cookiecutter.project_slug}}],
   pages=[
     "Home" => "index.md",
     "API Reference" => "api.md",
@@ -22,6 +22,6 @@ makedocs(
 )
 
 deploydocs(
-  repo="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.slug}}.jl.git"
+  repo="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}.git"
 )
 

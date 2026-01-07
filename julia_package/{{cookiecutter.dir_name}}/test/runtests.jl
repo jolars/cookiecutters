@@ -1,4 +1,4 @@
-using {{cookiecutter.slug}}
+using {{cookiecutter.project_slug}}
 using Test
 
 @testset "Basic" begin

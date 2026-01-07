@@ -1,8 +1,12 @@
 {
     "project_name": "ReproducibleRProject",
+    "project_slug": "ReproducibleRProject",
+    "dir_name": "ReproducibleRProject",
+    "github_user": "jolars",
+    "github_repo": "ReproducibleRProject",
     "project_description": "Short Description of What the Project Is About",
     "author": "Johan Larsson",
-    "year": "2022",
+    "year": "2026",
     "email": "johan.larsson@stat.lu.se",
     "orcid": "0000-0002-4029-5945",
     "license": [

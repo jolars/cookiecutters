@@ -1,4 +1,4 @@
-name = "{{cookiecutter.slug}}"
+name = "{{cookiecutter.project_slug}}"
 uuid = "e3f974f6-674d-4b8e-a3d1-5850677db852"
 authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}> and contributors"]
 version = "0.0.0"

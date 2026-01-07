@@ -1,5 +1,9 @@
 {
-  "slug": "an_article",
+  "project_name": "An Article",
+  "project_slug": "an_article",
+  "dir_name": "an_article",
+  "github_user": "jolars",
+  "github_repo": "an_article",
   "title": "Title",
   "author": "Johan Larsson",
   "email": "johan@jolars.co",

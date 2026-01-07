@@ -1,9 +1,9 @@
 """
-  module {{cookiecutter.slug}}
+  module {{cookiecutter.project_slug}}
 
 {{cookiecutter.description}}
 """
-module {{cookiecutter.slug}}
+module {{cookiecutter.project_slug}}
 
 function helloworld()
   println("Hello, World!")

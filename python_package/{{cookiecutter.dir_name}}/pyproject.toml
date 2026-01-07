@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "{{cookiecutter.slug}}"
+name = "{{cookiecutter.project_slug}}"
 version = "0.1.0"
 description = "{{cookiecutter.description}}"
 readme = "README.md"
@@ -33,10 +33,10 @@ classifiers = [
 ]
 
 [project.urls]
-homepage = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.slug}}"
-documentation = "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.slug}}/"
-changelog = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.slug}}/blob/main/CHANGELOG.md"
-tracker = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.slug}}/issues"
+homepage = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}"
+documentation = "https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.github_repo}}/"
+changelog = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/blob/main/CHANGELOG.md"
+tracker = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/issues"
 
 [project.optional-dependencies]
 docs = ["sphinx", "furo", "sphinx-copybutton", "myst-parser"]

@@ -26,4 +26,4 @@ docs:
 
 .PHONY: autodoc
 autodoc:
-	sphinx-autobuild docs/source docs/build --watch {{cookiecutter.slug}}
+	sphinx-autobuild docs/source docs/build --watch {{cookiecutter.project_slug}}

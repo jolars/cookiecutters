@@ -5,10 +5,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent / "exts"))
 
 from github_link import make_linkcode_resolve  # noqa: E402
-from {{cookiecutter.slug}} import __version__  # noqa: E402
+from {{cookiecutter.project_slug}} import __version__  # noqa: E402
 
 # Project information
-project = "{{cookiecutter.slug}}"
+project = "{{cookiecutter.project_name}}"
 copyright = "{{cookiecutter.year}}, {{cookiecutter.author}}"
 author = "{{cookiecutter.author}}"
 release = __version__
@@ -63,10 +63,10 @@ myst_enable_extensions = [
 
 # Linkcode
 linkcode_resolve = make_linkcode_resolve(
-    "{{cookiecutter.slug}}",
+    "{{cookiecutter.project_slug}}",
     (
         "https://github.com/{{cookiecutter.github_user}}/"
-        "{{cookiecutter.slug}}/blob/{revision}/"
+        "{{cookiecutter.github_repo}}/blob/{revision}/"
         "{package}/{path}#L{lineno}"
     ),
 )
