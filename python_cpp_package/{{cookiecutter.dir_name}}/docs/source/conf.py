@@ -5,7 +5,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent / "exts"))
 
 from github_link import make_linkcode_resolve  # noqa: E402
-from sortedl1 import __version__  # noqa: E402
+from {{cookiecutter.project_slug}} import __version__  # noqa: E402
 
 # Project information
 project = "{{cookiecutter.project_name}}"
