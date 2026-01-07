@@ -1,4 +1,4 @@
-name: Test python_cpp_package
+name: python_cpp_package
 
 on:
   push:

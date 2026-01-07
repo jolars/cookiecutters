@@ -1,4 +1,4 @@
-name: Test python_package
+name: python_package
 
 on:
   push:
@@ -12,7 +12,7 @@ on:
       - "python_package/**"
       - ".github/workflows/test-python-package.yml"
   schedule:
-    - cron: '0 0 * * 0'  # Weekly on Sunday at midnight UTC
+    - cron: "0 0 * * 0" # Weekly on Sunday at midnight UTC
   workflow_dispatch:
 
 jobs:
