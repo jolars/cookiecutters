@@ -1,0 +1,40 @@
+name: Test r_project
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "r_project/**"
+      - ".github/workflows/test-r-project.yml"
+  pull_request:
+    branches: [main, master]
+    paths:
+      - "r_project/**"
+      - ".github/workflows/test-r-project.yml"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install cookiecutter
+        run: pip install cookiecutter
+
+      - name: Generate project
+        run: |
+          cd /tmp
+          cookiecutter --no-input "$GITHUB_WORKSPACE/r_project"
+
+      - name: Verify output
+        run: |
+          cd /tmp
+          ls -la
+          test -d project

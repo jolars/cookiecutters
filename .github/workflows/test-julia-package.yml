@@ -1,0 +1,40 @@
+name: Test julia_package
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "julia_package/**"
+      - ".github/workflows/test-julia-package.yml"
+  pull_request:
+    branches: [main, master]
+    paths:
+      - "julia_package/**"
+      - ".github/workflows/test-julia-package.yml"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install cookiecutter
+        run: pip install cookiecutter
+
+      - name: Generate project
+        run: |
+          cd /tmp
+          cookiecutter --no-input "$GITHUB_WORKSPACE/julia_package"
+
+      - name: Verify output
+        run: |
+          cd /tmp
+          ls -la
+          test -d Pkg

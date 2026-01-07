@@ -1,0 +1,44 @@
+name: Test python_cpp_package
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "python_cpp_package/**"
+      - ".github/workflows/test-python-cpp-package.yml"
+  pull_request:
+    branches: [main, master]
+    paths:
+      - "python_cpp_package/**"
+      - ".github/workflows/test-python-cpp-package.yml"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install cookiecutter
+        run: pip install cookiecutter
+
+      - name: Generate project
+        run: |
+          cd /tmp
+          cookiecutter --no-input "$GITHUB_WORKSPACE/python_cpp_package"
+
+      - name: Install dependencies and build package
+        run: |
+          cd /tmp/mypkg
+          pip install -e .[test]
+
+      - name: Run tests
+        run: |
+          cd /tmp/mypkg
+          pytest tests/ -v

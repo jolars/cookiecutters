@@ -1,0 +1,82 @@
+name: Test Cookiecutters
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  test-cookiecutters:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        template:
+          - julia_package
+          - python_cpp_package
+          - python_package
+          - r_project
+          - tex_article
+          - tex_poster
+          - tex_presentation
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install cookiecutter
+        run: pip install cookiecutter
+
+      - name: Test ${{ matrix.template }}
+        run: |
+          cd /tmp
+          cookiecutter --no-input "$GITHUB_WORKSPACE/${{ matrix.template }}"
+          echo "✅ Successfully generated project from ${{ matrix.template }}"
+
+      - name: Verify output exists
+        run: |
+          cd /tmp
+          # Check that at least one directory was created
+          if [ $(find . -maxdepth 1 -type d ! -name "." ! -name ".." | wc -l) -eq 0 ]; then
+            echo "❌ No output directory created"
+            exit 1
+          fi
+          echo "✅ Output directory verified"
+
+  test-python-cpp-package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install cookiecutter
+        run: pip install cookiecutter
+
+      - name: Generate python_cpp_package
+        run: |
+          cd /tmp
+          cookiecutter --no-input "$GITHUB_WORKSPACE/python_cpp_package"
+          echo "✅ Generated python_cpp_package"
+
+      - name: Install dependencies and build package
+        run: |
+          cd /tmp/mypkg
+          pip install -e .[test]
+          echo "✅ Package built and installed successfully"
+
+      - name: Run tests
+        run: |
+          cd /tmp/mypkg
+          pytest tests/ -v
+          echo "✅ All tests passed"
