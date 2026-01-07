@@ -28,7 +28,7 @@ jobs:
           python-version: "3.11"
 
       - name: Install cookiecutter
-        run: pip install cookiecutter
+        run: pip install cookiecutter jinja2-time
 
       - name: Generate project
         run: |
