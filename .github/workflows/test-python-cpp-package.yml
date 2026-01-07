@@ -41,8 +41,8 @@ jobs:
       - name: Install dependencies and build package
         run: |
           cd /tmp/mypkg
-          uv pip install --system -e .
-          uv pip install --system --group dev
+          uv pip install -e .
+          uv pip install --group dev
 
       - name: Run tests
         run: |
