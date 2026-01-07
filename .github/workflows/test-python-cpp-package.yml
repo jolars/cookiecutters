@@ -12,7 +12,7 @@ on:
       - "python_cpp_package/**"
       - ".github/workflows/test-python-cpp-package.yml"
   schedule:
-    - cron: '0 0 * * 0'  # Weekly on Sunday at midnight UTC
+    - cron: "0 0 * * 0" # Weekly on Sunday at midnight UTC
   workflow_dispatch:
 
 jobs:
@@ -35,10 +35,14 @@ jobs:
           cd /tmp
           cookiecutter --no-input "$GITHUB_WORKSPACE/python_cpp_package"
 
+      - name: Install uv
+        run: pip install uv
+
       - name: Install dependencies and build package
         run: |
           cd /tmp/mypkg
-          pip install -e .[test]
+          uv pip install --system -e .
+          uv pip install --system --group dev
 
       - name: Run tests
         run: |
