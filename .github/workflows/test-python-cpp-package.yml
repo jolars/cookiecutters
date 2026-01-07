@@ -48,3 +48,8 @@ jobs:
         run: |
           cd /tmp/mypkg
           pytest tests/ -v
+
+      - name: Build documentation
+        run: |
+          cd /tmp/mypkg/docs
+          make html
