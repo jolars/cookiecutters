@@ -12,6 +12,7 @@
     "*.pdf",
     "*.bib",
     "*.png",
-    "*.jpg"
+    "*.jpg",
+    "tex/macros.tex"
   ]
 }
