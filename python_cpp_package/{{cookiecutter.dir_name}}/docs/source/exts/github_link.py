@@ -75,7 +75,7 @@ def _linkcode_resolve(domain, info, package, url_fmt, revision):
 
     class_name = info["fullname"].split(".")[0]
     module = importlib.import_module(info["module"])
-    obj = getattr(module, class_name)()
+    obj = getattr(module, class_name)
 
     # Unwrap the object to get the correct source
     # file in case that is wrapped by a decorator
@@ -112,6 +112,8 @@ def make_linkcode_resolve(package, url_fmt):
                                    '{path}#L{lineno}')
     """
     revision = _get_git_revision()
-    return partial(
-        _linkcode_resolve, revision=revision, package=package, url_fmt=url_fmt
-    )
+
+    def linkcode_resolve(domain, info):
+        return _linkcode_resolve(domain, info, package, url_fmt, revision)
+
+    return linkcode_resolve
