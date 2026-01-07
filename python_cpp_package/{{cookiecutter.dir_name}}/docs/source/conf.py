@@ -51,7 +51,7 @@ autosummary_imported_members = True
 # Options for HTML output
 html_theme = "furo"
 html_static_path = ["_static"]
-html_logo = "_static/slope-logo.png"
+html_logo = "_static/logo.svg"
 html_css_files = [
     "css/custom.css",
 ]
