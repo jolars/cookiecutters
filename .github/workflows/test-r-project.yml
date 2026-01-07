@@ -39,4 +39,4 @@ jobs:
         run: |
           cd /tmp
           ls -la
-          test -d project
+          find . -maxdepth 1 -type d ! -name "." ! -name ".." | grep -q .
