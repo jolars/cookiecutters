@@ -29,7 +29,14 @@ classifiers = [
 
 [dependency-groups]
 tests = ["pytest", "sphinx"]
-docs = ["sphinx", "furo", "sphinx-copybutton", "myst-parser", "myst-nb"]
+docs = [
+    "sphinx",
+    "furo",
+    "sphinx-copybutton",
+    "myst-parser",
+    "myst-nb",
+    "sphinx-autobuild",
+]
 dev = [{ include-group = "tests" }, { include-group = "docs" }]
 
 [tool.scikit-build]
