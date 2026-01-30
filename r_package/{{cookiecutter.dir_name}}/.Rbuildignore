@@ -41,3 +41,7 @@
 ^\.clang-format$
 ^README\.html$
 ^\.lintr$
+^devenv\.nix$
+^devenv\.yaml$
+^devenv\.lock$
+^\.envrc$
