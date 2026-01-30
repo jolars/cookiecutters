@@ -1,0 +1,7 @@
+development:
+  mode: auto
+
+url: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.github_repo}}/
+
+template:
+  bootstrap: 5

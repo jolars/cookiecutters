@@ -1,0 +1,19 @@
+Package: {{cookiecutter.package_name}}
+Title: {{cookiecutter.package_title}}
+Version: 0.0.0.9000
+Authors@R:
+    person(given = "Johan",
+           family = "Larsson",
+           role = c("aut", "cre"),
+           email = "{{cookiecutter.email}}",
+           comment = c(ORCID = "{{cookiecutter.orcid}}"))
+Description: {{cookiecutter.package_description}}
+Depends:
+    R (>= {{cookiecutter.r_version}}})
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Language: en-US
+URL: https://{{cookiecutter.github_user}}.github.io/{{cookiecutter.github_repo}}/
+BugReports: https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/issues
