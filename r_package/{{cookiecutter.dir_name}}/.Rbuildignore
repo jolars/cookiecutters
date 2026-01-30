@@ -45,3 +45,4 @@
 ^devenv\.yaml$
 ^devenv\.lock$
 ^\.envrc$
+^\.devenv$
