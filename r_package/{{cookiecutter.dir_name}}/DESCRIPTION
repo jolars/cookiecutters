@@ -9,7 +9,7 @@ Authors@R:
            comment = c(ORCID = "{{cookiecutter.orcid}}"))
 Description: {{cookiecutter.package_description}}
 Depends:
-    R (>= {{cookiecutter.r_version}}})
+    R (>= {{cookiecutter.r_version}})
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

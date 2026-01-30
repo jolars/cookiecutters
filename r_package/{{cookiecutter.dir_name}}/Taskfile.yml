@@ -48,12 +48,12 @@ tasks:
   check:
     deps: [compile-attributes]
     cmds:
-      - "Rscript -e 'devtools::check()'"
+      - Rscript -e 'devtools::check()'
 
   test:
     deps: [compile-attributes]
     cmds:
-      - "Rscript -e 'devtools::test()'"
+      - Rscript -e 'devtools::test()'
 
   readme:
     cmds:

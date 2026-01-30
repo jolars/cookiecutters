@@ -21,6 +21,8 @@
         "*.so",
         "*.o",
         "*.png",
-        "*.jpg"
+        "*.jpg",
+        "Taskfile.yml",
+        ".github/workflows/*"
     ]
 }

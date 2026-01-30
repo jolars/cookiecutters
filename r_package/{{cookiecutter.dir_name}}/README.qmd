@@ -1,0 +1,12 @@
+---
+output: github_document
+---
+
+# {{cookiecutter.package_name}}
+
+<!-- badges: start -->
+[![R build status](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/workflows/R-CMD-check/badge.svg)](https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/actions)
+[![Code coverage](https://codecov.io/gh/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/graph/badge.svg)](https://app.codecov.io/gh/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}})
+<!-- badges: end -->
+
+This is the README file for the R package `{{cookiecutter.package_name}}`.
