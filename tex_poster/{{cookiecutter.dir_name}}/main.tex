@@ -74,10 +74,16 @@
 \usepackage[export]{adjustbox}
 \usepackage{booktabs}
 
-% title
+% title block
 \title{{'{' + cookiecutter.title + '}'}}
+
 \author[shortname]{\texorpdfstring{\alert{Johan Larsson}}{Johan Larsson}\inst{1,*}}
-                      
+
+\institute[shortinst]{%
+  \inst{1} The Department of Statistics, Lund University, Sweden\\
+  \inst{*} \href{mailto:{{cookiecutter.email}}}{\nolinkurl{{'{' + cookiecutter.email + '}'}}}
+}
+
 {% raw %}
 
 \renewcommand{\indent}{\hspace*{2.5ex}}
@@ -97,69 +103,69 @@
 \begin{document}
 \begin{frame}[t]
 
-% title
-\begin{minipage}[b][\titleheight][t]{\threecolwidth}%
-  {\usebeamerfont{title}\usebeamercolor{title in headline}\inserttitle\\[0.5ex]}
-  {\usebeamerfont{author}\usebeamercolor{author}\insertauthor\\[1ex]}
-  {\usebeamerfont{institute}\usebeamercolor{institute}\insertinstitute\\[1ex]}
-\end{minipage}\hfill
-\begin{minipage}[b][\titleheight][t]{\onecolwidth}%
-  \hfill
-  \includegraphics[height=4.5in]{lu}
-\end{minipage}
+  % title
+  \begin{minipage}[b][\titleheight][t]{\threecolwidth}%
+    {\usebeamerfont{title}\usebeamercolor{title in headline}\inserttitle\\[0.5ex]}
+    {\usebeamerfont{author}\usebeamercolor{author}\insertauthor\\[1ex]}
+    {\usebeamerfont{institute}\usebeamercolor{institute}\insertinstitute\\[1ex]}
+  \end{minipage}\hfill
+  \begin{minipage}[b][\titleheight][t]{\onecolwidth}%
+    \hfill
+    \includegraphics[height=4.5in]{lu}
+  \end{minipage}
 
-% first column
-%
-\begin{minipage}[t][\colheight][t]{\onecolwidth}
-  \begin{block}{A block}
-    \blindtext
-  \end{block}
-\end{minipage}\hfill
-%
-% second column
-%
-\begin{minipage}[t][\colheight][t]{\onecolwidth}
-  \begin{block}{A block}
-    \blindtext
-  \end{block}
-\end{minipage}\hfill
-%
-% third column
-%
-\begin{minipage}[t][\colheight][t]{\onecolwidth}
-  \begin{block}{A block}
-    \blindtext
-  \end{block}
-\end{minipage}\hfill
-%
-% fourth column
-%
-\begin{minipage}[t][\colheight][t]{\onecolwidth}
-  \begin{block}{A block}
-    \blindtext
-  \end{block}
+  % first column
+  %
+  \begin{minipage}[t][\colheight][t]{\onecolwidth}
+    \begin{block}{A block}
+      \blindtext
+    \end{block}
+  \end{minipage}\hfill
+  %
+  % second column
+  %
+  \begin{minipage}[t][\colheight][t]{\onecolwidth}
+    \begin{block}{A block}
+      \blindtext
+    \end{block}
+  \end{minipage}\hfill
+  %
+  % third column
+  %
+  \begin{minipage}[t][\colheight][t]{\onecolwidth}
+    \begin{block}{A block}
+      \blindtext
+    \end{block}
+  \end{minipage}\hfill
+  %
+  % fourth column
+  %
+  \begin{minipage}[t][\colheight][t]{\onecolwidth}
+    \begin{block}{A block}
+      \blindtext
+    \end{block}
 
-  \vfill
+    \vfill
 
-  \begin{block}{References}
-    \renewcommand*{\bibfont}{\footnotesize}
-    \printbibliography[heading=none]
-  \end{block}
+    \begin{block}{References}
+      \renewcommand*{\bibfont}{\footnotesize}
+      \printbibliography[heading=none]
+    \end{block}
 
-  \vfill
+    \vfill
 
-{% endraw %}
+    {% endraw %}
 
-  \begin{block}{Contact}
-    \begin{minipage}[b]{0.6\linewidth}
-      \begin{itemize}
-        \item E-mail: \href{mailto:{{cookiecutter.email}}}{\nolinkurl{{'{' + cookiecutter.email + '}'}}}\\
-        \item Homepage: \href{https://larssonjohan.com}{\url{https://larssonjohan.com}} \\
-        \item Mastodon: \href{https://fediscience.org/web/@jolars}{\url{fediscience.org/web/@jolars}}
+    \begin{block}{Contact}
+      \begin{minipage}[b]{0.6\linewidth}
+        \begin{itemize}
+          \item E-mail: \href{mailto:{{cookiecutter.email}}}{\nolinkurl{{'{' + cookiecutter.email + '}'}}}\\
+          \item Homepage: \href{https://larssonjohan.com}{\url{https://larssonjohan.com}} \\
+          \item Mastodon: \href{https://fediscience.org/web/@jolars}{\url{fediscience.org/web/@jolars}}
         \end{itemize}
-        \end{minipage}\hfill%
-        \includegraphics[width=7cm,valign=b]{qr-url.pdf}
-      \end{block}
-    \end{minipage}\hfill
-  \end{frame}
+      \end{minipage}\hfill%
+      \includegraphics[width=7cm,valign=b]{qr-url.pdf}
+    \end{block}
+  \end{minipage}\hfill
+\end{frame}
 \end{document}
