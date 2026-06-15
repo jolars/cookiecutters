@@ -17,6 +17,7 @@
     package = (
       pkgs.rWrapper.override {
         packages = with pkgs.rPackages; [
+          covr
           devtools
           roxygen2
           spelling

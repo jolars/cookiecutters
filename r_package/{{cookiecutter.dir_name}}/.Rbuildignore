@@ -8,7 +8,7 @@
 ^appveyor\.yml$
 ^\.travis\.yml$
 ^README\.Rmd$
-^SLOPE\.Rproj$
+^*.Rproj$
 ^\.Rproj\.user$
 ^pkgdown$
 ^cran-comments\.md$
@@ -43,6 +43,10 @@
 ^\.lintr$
 ^devenv\.nix$
 ^devenv\.yaml$
+^devenv\.yml$
 ^devenv\.lock$
 ^\.envrc$
 ^\.devenv$
+^\.devenv\.flake\.nix$
+^\.pre-commit-config\.yaml$
+^\.pre-commit-config\.yml$

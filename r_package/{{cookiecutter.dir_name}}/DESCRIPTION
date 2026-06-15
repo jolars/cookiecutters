@@ -8,8 +8,21 @@ Authors@R:
            email = "{{cookiecutter.email}}",
            comment = c(ORCID = "{{cookiecutter.orcid}}"))
 Description: {{cookiecutter.package_description}}
+{%- if cookiecutter.license == "GNU GPL v3.0" -%}
+License: GPL-3 + file LICENSE
+{%- elif cookiecutter.license == "BSD-3" -%}
+License: BSD_3_clause + file LICENSE
+{%- elif cookiecutter.license == "Apache Software License 2.0" -%}
+License: Apache License (>= 2.0) + file LICENSE
+{%- elif cookiecutter.license == "MIT" -%}
+License: MIT + file LICENSE
+{% endif %}
 Depends:
     R (>= {{cookiecutter.r_version}})
+Suggests:
+    covr,
+    spelling,
+    testthat (>= 2.1.0)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
