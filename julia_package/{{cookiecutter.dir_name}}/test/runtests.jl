@@ -1,9 +1,7 @@
-using {{cookiecutter.project_slug}}
+using {{cookiecutter.project_name}}
 using Test
 
 @testset "Basic" begin
-  project_root = @projectroot()
-
   @test 1 + 2 == 3
 end
 

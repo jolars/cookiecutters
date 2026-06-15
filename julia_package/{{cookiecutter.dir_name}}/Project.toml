@@ -1,7 +1,7 @@
-name = "{{cookiecutter.project_slug}}"
+name = "{{cookiecutter.project_name}}"
 uuid = "e3f974f6-674d-4b8e-a3d1-5850677db852"
 authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}> and contributors"]
-version = "0.0.0"
+version = "0.0.1"
 
 [deps]
 FilePathsBase = "48062228-2e41-5def-b9a4-89aafe57970f"

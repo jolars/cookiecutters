@@ -1,5 +1,5 @@
 using Documenter
-using {{cookiecutter.project_slug}}
+using {{cookiecutter.project_name}}
 
 # Copy CHANGELOG.md to docs/src/CHANGELOG.md
 cp(
@@ -13,7 +13,7 @@ makedocs(
   format=Documenter.HTML(
     assets=["assets/favicon.ico"],
   ),
-  modules=[{{cookiecutter.project_slug}}],
+  modules=[{{cookiecutter.project_name}}],
   pages=[
     "Home" => "index.md",
     "API Reference" => "api.md",

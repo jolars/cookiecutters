@@ -1,6 +1,6 @@
 # API Reference
 
 ```@docs
-{{cookiecutter.project_slug}}.{{cookiecutter.project_slug}}
-{{cookiecutter.project_slug}}.helloworld
+{{cookiecutter.project_name}}.{{cookiecutter.project_name}}
+{{cookiecutter.project_name}}.helloworld
 ```
