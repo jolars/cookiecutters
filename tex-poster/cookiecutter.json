@@ -1,5 +1,7 @@
 {
-  "slug": "a-poster",
+  "project_name": "A Poster",
+  "project_slug": "a-poster",
+  "dir_name": "a-poster",
   "title": "Title",
   "author": "Johan Larsson",
   "email": "johan@jolars.co",

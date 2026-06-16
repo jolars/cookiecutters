@@ -4,12 +4,12 @@ on:
   push:
     branches: [main, master]
     paths:
-      - "tex_poster/**"
+      - "tex-poster/**"
       - ".github/workflows/test-tex-poster.yml"
   pull_request:
     branches: [main, master]
     paths:
-      - "tex_poster/**"
+      - "tex-poster/**"
       - ".github/workflows/test-tex-poster.yml"
   schedule:
     - cron: "0 0 * * 0" # Weekly on Sunday at midnight UTC
@@ -33,7 +33,7 @@ jobs:
       - name: Generate project
         run: |
           cd /tmp
-          cookiecutter --no-input "$GITHUB_WORKSPACE/tex_poster"
+          cookiecutter --no-input "$GITHUB_WORKSPACE/tex-poster"
 
       - name: Verify output
         run: |
