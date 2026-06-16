@@ -1,9 +1,5 @@
 {
-  "project_name": "A Poster",
-  "project_slug": "a_poster",
-  "dir_name": "a_poster",
-  "github_user": "jolars",
-  "github_repo": "a_poster",
+  "slug": "a-poster",
   "title": "Title",
   "author": "Johan Larsson",
   "email": "johan@jolars.co",

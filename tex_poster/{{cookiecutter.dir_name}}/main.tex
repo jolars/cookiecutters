@@ -46,7 +46,7 @@
 
 % bibliography
 \usepackage[backend=biber,style=authoryear,locallabelwidth,url=false]{biblatex}
-\addbibresource{{'{' + cookiecutter.project_slug + '.bib' + '}'}}
+\addbibresource{{'{' + cookiecutter.slug + '.bib' + '}'}}
 
 %\beamertemplategridbackground[1cm] % for layout out the design
 
@@ -80,7 +80,7 @@
 \author[shortname]{\texorpdfstring{\alert{Johan Larsson}}{Johan Larsson}\inst{1,*}}
 
 \institute[shortinst]{%
-  \inst{1} The Department of Statistics, Lund University, Sweden\\
+  \inst{1} The Department of Statistics, Lund University, Sweden,
   \inst{*} \href{mailto:{{cookiecutter.email}}}{\nolinkurl{{'{' + cookiecutter.email + '}'}}}
 }
 
@@ -160,11 +160,12 @@
       \begin{minipage}[b]{0.6\linewidth}
         \begin{itemize}
           \item E-mail: \href{mailto:{{cookiecutter.email}}}{\nolinkurl{{'{' + cookiecutter.email + '}'}}}\\
-          \item Homepage: \href{https://larssonjohan.com}{\url{https://larssonjohan.com}} \\
-          \item Mastodon: \href{https://fediscience.org/web/@jolars}{\url{fediscience.org/web/@jolars}}
+          \item Homepage: \href{https://jolars.co}{\url{https://jolars.co}} \\
+          \item Mastodon: \href{https://mastodon.social/web/@jolars}{\url{mastodon.social/web/@jolars}}
+          \item BlueSky \href{https://mastodon.social/web/@jolars}{\url{mastodon.social/web/@jolars}}
         \end{itemize}
       \end{minipage}\hfill%
-      \includegraphics[width=7cm,valign=b]{qr-url.pdf}
+      \includegraphics[width=7cm,valign=b]{qr.pdf}
     \end{block}
   \end{minipage}\hfill
 \end{frame}
