@@ -107,3 +107,4 @@ convention = "numpy"
 
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["T20"]
+"docs/source/exts/github_link.py" = ["BLE001", "PTH120", "RET502", "T201"]

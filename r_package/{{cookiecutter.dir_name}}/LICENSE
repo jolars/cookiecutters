@@ -1,4 +1,4 @@
-{%- if cookiecutter.license == "GNU GPL v3.0" -%}
+{% if cookiecutter.license == "GNU GPL v3.0" -%}
 
 # GNU General Public License
 

@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -45,6 +45,14 @@ jobs:
           cd /tmp/mypkg
           uv pip install --system -e .
           uv pip install --system -e . --group dev
+
+      - name: Verify baseline
+        run: |
+          cd /tmp/mypkg
+          test -f AGENTS.md
+          test -f devenv.yaml
+          test -f panache.toml
+          test -f versionary.jsonc
 
       - name: Run tests
         run: |

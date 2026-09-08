@@ -4,13 +4,13 @@
    contain the root `toctree` directive.
 
 {{cookiecutter.description}}
-============================================
+================================================================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-
+   modules
 
 Indices and tables
 ==================

@@ -1,11 +1,14 @@
+from __future__ import annotations
+
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent / "exts"))
 
-from github_link import make_linkcode_resolve  # noqa: E402
-from {{cookiecutter.project_slug}} import __version__  # noqa: E402
+from github_link import make_linkcode_resolve
+
+from {{cookiecutter.project_slug}} import __version__
 
 # Project information
 project = "{{cookiecutter.project_name}}"
@@ -78,9 +81,7 @@ nb_execution_mode = "auto"
 # Linkcode
 linkcode_resolve = make_linkcode_resolve(
     "{{cookiecutter.project_slug}}",
-    (
-        "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/blob/{revision}/{package}/{path}#L{lineno}"
-    ),
+    "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}/blob/{revision}/{package}/{path}#L{lineno}",
 )
 
 # Napoleon

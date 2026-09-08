@@ -1,0 +1,5 @@
+flavor = "gfm"
+
+[formatters]
+python = "ruff"
+toml = "taplo"

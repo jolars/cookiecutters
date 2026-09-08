@@ -5,6 +5,11 @@
 """
 module {{cookiecutter.project_slug}}
 
+"""
+    helloworld()
+
+Print `"Hello, World!"`.
+"""
 function helloworld()
   println("Hello, World!")
 end
@@ -12,4 +17,3 @@ end
 export helloworld
 
 end
-

@@ -7,7 +7,8 @@
   packages = [
     pkgs.bashInteractive
     pkgs.go-task
-    pkgs.air
+    pkgs.air-formatter
+    pkgs.panache
     pkgs.quartoMinimal
   ];
 
@@ -31,6 +32,13 @@
       enable = true;
       entry = "air format --check";
       files = "\\.(r|R)$";
+      language = "system";
+    };
+
+    panache-format = {
+      enable = true;
+      entry = "panache format";
+      files = "\\.(md|qmd|Rmd)$";
       language = "system";
     };
   };

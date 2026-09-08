@@ -5,9 +5,9 @@
 
 {
   packages = [
-    pkgs.git
-    pkgs.cmake
     pkgs.go-task
+    pkgs.panache
+    pkgs.taplo
   ];
 
   languages = {
@@ -22,5 +22,12 @@
         ]
       );
     };
+  };
+
+  git-hooks.hooks.panache-format = {
+    enable = true;
+    entry = "panache format";
+    files = "\\.(md|qmd|Rmd)$";
+    language = "system";
   };
 }

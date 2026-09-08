@@ -1,0 +1,6 @@
+flavor = "gfm"
+
+[formatters]
+cpp = "clang-format"
+python = "ruff"
+toml = "taplo"

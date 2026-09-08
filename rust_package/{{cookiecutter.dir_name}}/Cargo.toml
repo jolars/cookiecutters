@@ -1,0 +1,12 @@
+[package]
+name = "{{cookiecutter.crate_name}}"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+description = "{{cookiecutter.description}}"
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+license = "MIT"
+repository = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}"
+readme = "README.md"
+
+[dependencies]

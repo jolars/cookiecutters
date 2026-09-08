@@ -14,7 +14,7 @@ authors = [
   { name = "{{cookiecutter.author}}", email = "{{cookiecutter.email}}" },
 ]
 license = { file = "LICENSE" }
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 classifiers = [
   "Development Status :: 3 - Alpha",
   "License :: OSI Approved :: MIT License",
@@ -24,11 +24,11 @@ classifiers = [
   "Operating System :: POSIX",
   "Operating System :: Unix",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Topic :: Scientific/Engineering",
 ]
 
@@ -41,6 +41,9 @@ tracker = "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github
 [project.optional-dependencies]
 docs = ["sphinx", "furo", "sphinx-copybutton", "myst-parser"]
 tests = ["pytest", "sphinx"]
+
+[dependency-groups]
+dev = ["pytest", "sphinx", "furo", "sphinx-copybutton", "myst-parser"]
 
 [tool.ruff.lint]
 extend-select = [
@@ -65,12 +68,14 @@ extend-select = [
 ]
 ignore = [
   "PLR",    # Design related pylint codes
-  "PT004",  # Incorrect check, usefixtures is the correct way to do this
   "RUF012", # Would require a lot of ClassVar's
 ]
 
 [tool.ruff.lint.pydocstyle]
 convention = "numpy"
+
+[tool.ruff.lint.per-file-ignores]
+"docs/source/exts/github_link.py" = ["BLE001", "PTH120", "RET502", "T201"]
 
 [tool.mypy]
 plugins = "numpy.typing.mypy_plugin"

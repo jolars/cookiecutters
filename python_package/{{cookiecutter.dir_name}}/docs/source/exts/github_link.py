@@ -37,7 +37,6 @@ import inspect
 import os
 import subprocess
 import sys
-from functools import partial
 
 REVISION_CMD = "git rev-parse --short HEAD"
 

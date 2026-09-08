@@ -1,0 +1,44 @@
+name: rust_package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "rust_package/**"
+      - ".github/workflows/test-rust-package.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "rust_package/**"
+      - ".github/workflows/test-rust-package.yml"
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+
+      - name: Install Cookiecutter
+        run: pip install cookiecutter
+
+      - name: Generate project
+        run: cookiecutter --no-input --output-dir /tmp "$GITHUB_WORKSPACE/rust_package"
+
+      - name: Check generated project
+        working-directory: /tmp/my-crate
+        run: |
+          test -f AGENTS.md
+          test -f panache.toml
+          test -f versionary.jsonc
+          test -f devenv.yaml
+          cargo fmt --all -- --check
+          cargo clippy --all-targets --all-features -- -D warnings
+          cargo test --all-features

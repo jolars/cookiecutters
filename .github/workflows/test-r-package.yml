@@ -1,0 +1,42 @@
+name: r_package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "r_package/**"
+      - ".github/workflows/test-r-package.yml"
+  pull_request:
+    branches: [main]
+    paths:
+      - "r_package/**"
+      - ".github/workflows/test-r-package.yml"
+  schedule:
+    - cron: "0 0 * * 0"
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.x"
+
+      - name: Install Cookiecutter
+        run: pip install cookiecutter
+
+      - name: Generate project
+        run: cookiecutter --no-input --output-dir /tmp "$GITHUB_WORKSPACE/r_package"
+
+      - name: Check generated project
+        working-directory: /tmp/rpkg
+        run: |
+          test -f AGENTS.md
+          test -f devenv.yaml
+          test -f panache.toml
+          test -f versionary.jsonc
+          test -f .github/workflows/R-CMD-check.yml

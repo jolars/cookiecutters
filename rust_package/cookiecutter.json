@@ -1,0 +1,14 @@
+{
+  "project_name": "My Crate",
+  "crate_name": "my-crate",
+  "dir_name": "my-crate",
+  "github_user": "jolars",
+  "github_repo": "my-crate",
+  "description": "A short description of the crate.",
+  "author": "Johan Larsson",
+  "email": "johan@jolars.co",
+  "year": "2026",
+  "_copy_without_render": [
+    ".github/workflows/*"
+  ]
+}

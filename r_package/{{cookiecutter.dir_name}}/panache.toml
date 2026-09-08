@@ -1,0 +1,10 @@
+flavor = "rmarkdown"
+
+extend-exclude = ["README.md"]
+
+[flavor-overrides]
+"AGENTS.md" = "gfm"
+"NEWS.md" = "gfm"
+
+[formatters]
+r = "air"

@@ -8,9 +8,12 @@
   packages = [
     pkgs.bashInteractive
     pkgs.cmake
+    pkgs.clang-tools
+    pkgs.go-task
     pkgs.ninja
-    pkgs.basedpyright
+    pkgs.panache
     pkgs.ruff
+    pkgs.taplo
   ];
 
   # https://devenv.sh/languages/
@@ -36,6 +39,12 @@
   git-hooks.hooks = {
     ruff.enable = true;
     ruff-format.enable = true;
+    panache-format = {
+      enable = true;
+      entry = "panache format";
+      files = "\\.(md|qmd|Rmd)$";
+      language = "system";
+    };
   };
 
   # See full reference at https://devenv.sh/reference/options/

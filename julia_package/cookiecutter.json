@@ -1,14 +1,16 @@
 {
-  "project_name": "Pkg",
-  "project_slug": "Pkg",
-  "dir_name": "Pkg",
+  "project_name": "MyPackage",
+  "project_slug": "MyPackage",
+  "dir_name": "MyPackage.jl",
   "github_user": "jolars",
-  "github_repo": "Pkg",
+  "github_repo": "MyPackage.jl",
   "description": "Short Description of What Package Is About (in Title Case)",
   "author": "Johan Larsson",
   "email": "johanlarsson@outlook.com",
   "year": "2026",
   "_copy_without_render": [
-    "*.pdf"
+    "*.pdf",
+    ".github/workflows/*",
+    "Taskfile.yml"
   ]
 }

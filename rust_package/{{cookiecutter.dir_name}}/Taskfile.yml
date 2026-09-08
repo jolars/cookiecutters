@@ -1,0 +1,29 @@
+version: "3"
+
+tasks:
+  format:
+    desc: Format source and documentation
+    cmds:
+      - cargo fmt --all
+      - panache format .
+
+  lint:
+    desc: Lint source and documentation
+    cmds:
+      - cargo clippy --all-targets --all-features -- -D warnings
+      - panache lint .
+
+  test:
+    desc: Run tests
+    cmds:
+      - cargo test --all-features
+
+  check:
+    desc: Run all required checks
+    cmds:
+      - cargo fmt --all -- --check
+      - cargo clippy --all-targets --all-features -- -D warnings
+      - cargo test --all-features
+      - RUSTDOCFLAGS="-D warnings" cargo doc --no-deps --all-features
+      - panache format --check .
+      - panache lint .

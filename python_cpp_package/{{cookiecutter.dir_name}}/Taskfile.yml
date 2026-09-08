@@ -31,6 +31,17 @@ tasks:
       - pytest
       - cd docs && make doctest
 
+  check:
+    desc: Run all required checks
+    cmds:
+      - ruff format --check .
+      - ruff check .
+      - clang-format --dry-run --Werror src/*.cpp
+      - pytest
+      - cd docs && make doctest
+      - panache format --check .
+      - panache lint .
+
   docs:
     desc: Build documentation
     dir: docs

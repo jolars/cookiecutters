@@ -8,20 +8,25 @@ cp(
   force=true
 )
 
-makedocs(
+documenter_options = haskey(ENV, "GITHUB_ACTIONS") ? (;) : (; remotes=nothing)
+
+makedocs(;
   sitename="{{cookiecutter.project_name}}",
   format=Documenter.HTML(
     assets=["assets/favicon.ico"],
+    edit_link="main",
+    repolink="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}",
   ),
   modules=[{{cookiecutter.project_name}}],
   pages=[
     "Home" => "index.md",
     "API Reference" => "api.md",
     "Changelog" => "CHANGELOG.md",
-  ]
+  ],
+  documenter_options...
 )
 
 deploydocs(
-  repo="https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}.git"
+  devbranch="main",
+  repo="github.com/{{cookiecutter.github_user}}/{{cookiecutter.github_repo}}.git"
 )
-

@@ -3,12 +3,12 @@
 ^CODE_OF_CONDUCT\.md$
 ^docs$
 ^_pkgdown\.yml$
-^LICENSE\.md$
 ^codecov\.yml$
 ^appveyor\.yml$
 ^\.travis\.yml$
 ^README\.Rmd$
-^*.Rproj$
+^README\.qmd$
+^.*\.Rproj$
 ^\.Rproj\.user$
 ^pkgdown$
 ^cran-comments\.md$
@@ -50,3 +50,8 @@
 ^\.devenv\.flake\.nix$
 ^\.pre-commit-config\.yaml$
 ^\.pre-commit-config\.yml$
+^AGENTS\.md$
+^CHANGELOG\.md$
+^panache\.toml$
+^versionary\.jsonc$
+^\.versionary-manifest\.json$

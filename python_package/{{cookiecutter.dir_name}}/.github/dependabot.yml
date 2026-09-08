@@ -1,8 +1,18 @@
-# Use dependabot to keep github actions up to date
-
 version: 2
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    groups:
+      python:
+        patterns:
+          - "*"

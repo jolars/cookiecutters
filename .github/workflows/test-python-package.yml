@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
 
       - name: Set up Python
         uses: actions/setup-python@v7
@@ -38,5 +38,8 @@ jobs:
       - name: Verify output
         run: |
           cd /tmp
-          ls -la
           test -d pkg
+          test -f pkg/AGENTS.md
+          test -f pkg/devenv.yaml
+          test -f pkg/panache.toml
+          test -f pkg/versionary.jsonc
