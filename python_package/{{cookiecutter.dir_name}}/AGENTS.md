@@ -11,7 +11,7 @@ Run focused tests while developing, then run the complete check before handing
 off a nontrivial change:
 
 ```bash
-task check
+devenv tasks run project:check
 ```
 
 The individual checks are:
@@ -20,7 +20,7 @@ The individual checks are:
 ruff format --check .
 ruff check .
 pytest
-make -C docs html
+sphinx-build -M html docs/source docs/build
 panache format --check .
 panache lint .
 ```

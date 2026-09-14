@@ -41,5 +41,9 @@ jobs:
           test -d pkg
           test -f pkg/AGENTS.md
           test -f pkg/devenv.yaml
+          test -f pkg/devenv.nix
+          test ! -e pkg/Taskfile.yml
+          test ! -e pkg/Makefile
+          test ! -e pkg/docs/Makefile
           test -f pkg/panache.toml
           test -f pkg/versionary.jsonc

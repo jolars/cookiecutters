@@ -10,7 +10,6 @@
   "year": "2026",
   "_copy_without_render": [
     "*.pdf",
-    ".github/workflows/*",
-    "Taskfile.yml"
+    ".github/workflows/*"
   ]
 }

@@ -20,8 +20,8 @@ release baseline belongs in those project types.
 
 Each template has its own `cookiecutter.json` and generated-directory
 expression. Inspect those files rather than assuming variable names. Preserve
-`_copy_without_render` entries for GitHub workflow expressions, Go Task
-expressions, and binary assets that Jinja must not interpret.
+`_copy_without_render` entries for GitHub workflow expressions and binary
+assets that Jinja must not interpret.
 
 ## Editing and validation
 

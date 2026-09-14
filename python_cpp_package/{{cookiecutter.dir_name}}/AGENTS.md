@@ -12,7 +12,7 @@ Run focused tests while developing, then run the complete check before handing
 off a nontrivial change:
 
 ```bash
-task check
+devenv tasks run project:check
 ```
 
 The individual checks are:
@@ -22,7 +22,7 @@ ruff format --check .
 ruff check .
 clang-format --dry-run --Werror src/*.cpp
 pytest
-make -C docs doctest
+sphinx-build -M doctest docs/source docs/build
 panache format --check .
 panache lint .
 ```

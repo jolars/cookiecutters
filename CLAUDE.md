@@ -57,9 +57,9 @@ to confirm Jinja2 renders cleanly and filenames came out as expected.
 
 The `python_cpp_package` CI goes further than generation: it installs the
 generated package with `uv pip install -e .`, runs `pytest tests/ -v`, and
-builds docs with `make html`. The Rust test runs formatting, Clippy, and Cargo
-tests. If you change either template, run those checks against the generated
-project.
+builds docs with `sphinx-build -M html docs/source docs/build`. The Rust test
+runs formatting, Clippy, and Cargo tests. If you change either template, run
+those checks against the generated project.
 
 ## CI
 
@@ -74,9 +74,9 @@ cover siblings.
 These reflect the author's tooling and are worth preserving across templates for
 consistency:
 
-- Tasks via `Taskfile.yml` (newer templates, e.g. `r_package`,
-  `python_cpp_package`) or `Makefile` (older, e.g. `r_project`).
-- `devenv` (`devenv.nix`/`devenv.yaml`) for environment setup.
+- `devenv` (`devenv.nix`/`devenv.yaml`) for environment setup and tasks. Run
+  `devenv tasks list` to discover commands and `devenv tasks run project:test`
+  to run a task. Python documentation previews use `devenv up docs`.
 - `uv` for Python dependency/install management.
 - Formatting config shipped per language: `air.toml` (R), `.latexindent.yaml`
   and `.texlabroot` (LaTeX), `ruff` (Python).

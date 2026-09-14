@@ -24,4 +24,17 @@ format](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## Versioning
 
-{{cookiecutter.project_name}} uses [semantic versioning](https://semver.org) and Versionary for releases.
+{{cookiecutter.project_name}} uses [semantic versioning](https://semver.org) and Versionary for
+releases.
+
+## Development
+
+Enter the development environment and run the project tasks:
+
+```console
+devenv shell
+devenv tasks run project:test
+devenv tasks run project:docs
+```
+
+Run `devenv tasks list` to see all available tasks.

@@ -12,7 +12,7 @@ Run focused tests while developing, then run the complete verification before
 handing off a nontrivial change:
 
 ```bash
-task verify
+devenv tasks run project:verify
 ```
 
 The individual checks are:

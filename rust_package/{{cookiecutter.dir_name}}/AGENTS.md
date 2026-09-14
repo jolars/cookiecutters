@@ -11,7 +11,7 @@ Run focused tests while developing, then run the complete check before handing
 off a nontrivial change:
 
 ```bash
-task check
+devenv tasks run project:check
 ```
 
 The individual checks are:

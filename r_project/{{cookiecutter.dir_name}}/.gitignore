@@ -1,3 +1,9 @@
+# devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+.direnv/
+
 # History files
 .Rhistory
 .Rapp.history

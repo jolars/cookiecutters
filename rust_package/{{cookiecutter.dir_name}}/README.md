@@ -8,5 +8,5 @@ Enter the development environment and run the complete local check:
 
 ```console
 devenv shell
-task check
+devenv tasks run project:check
 ```

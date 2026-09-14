@@ -43,7 +43,7 @@ jobs:
           python-version: "3.x"
       - uses: astral-sh/setup-uv@v7
       - run: uv pip install --system -e '.[docs]'
-      - run: make -C docs html
+      - run: sphinx-build -M html docs/source docs/build
       - uses: jolars/panache-action@v1
 
   versionary:

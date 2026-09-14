@@ -41,5 +41,8 @@ jobs:
           test -d MyPackage.jl
           test -f MyPackage.jl/AGENTS.md
           test -f MyPackage.jl/devenv.yaml
+          test -f MyPackage.jl/devenv.nix
+          test ! -e MyPackage.jl/Taskfile.yml
+          test ! -e MyPackage.jl/Makefile
           test -f MyPackage.jl/panache.toml
           test -f MyPackage.jl/versionary.jsonc

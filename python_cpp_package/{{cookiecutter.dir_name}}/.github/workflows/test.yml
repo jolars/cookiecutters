@@ -59,8 +59,7 @@ jobs:
 
       - name: Build documentation
         run: |
-          cd docs
-          make html
+          sphinx-build -M html docs/source docs/build
 
   build_sdist:
     name: Build source distribution

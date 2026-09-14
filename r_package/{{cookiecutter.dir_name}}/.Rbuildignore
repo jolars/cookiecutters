@@ -19,7 +19,6 @@
 ^clang-.*
 ^gfortran.*
 ^\.vscode$
-^Makefile$
 ^\.cache$
 ^src/\.cache$
 ^src/compile_commands\.json$
@@ -30,7 +29,6 @@
 ^flake\.lock$
 ^flake\.nix$
 ^\.envrc$
-^Taskfile\.yml$
 ^doc$
 ^Meta$
 ^_libs$

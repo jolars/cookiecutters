@@ -51,6 +51,10 @@ jobs:
           cd /tmp/mypkg
           test -f AGENTS.md
           test -f devenv.yaml
+          test -f devenv.nix
+          test ! -e Taskfile.yml
+          test ! -e Makefile
+          test ! -e docs/Makefile
           test -f panache.toml
           test -f versionary.jsonc
 
@@ -61,5 +65,5 @@ jobs:
 
       - name: Build documentation
         run: |
-          cd /tmp/mypkg/docs
-          make html
+          cd /tmp/mypkg
+          sphinx-build -M html docs/source docs/build

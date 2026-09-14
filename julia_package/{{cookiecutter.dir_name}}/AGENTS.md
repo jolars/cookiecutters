@@ -2,8 +2,8 @@
 
 ## Project overview
 
-{{cookiecutter.project_name}} is a Julia package. Package code lives in `src/`, tests live in `test/`, and
-Documenter sources live in `docs/`.
+{{cookiecutter.project_name}} is a Julia package. Package code lives in `src/`, tests live in
+`test/`, and Documenter sources live in `docs/`.
 
 ## Validation
 
@@ -11,8 +11,8 @@ Run the package tests and documentation build before handing off a nontrivial
 change:
 
 ```bash
-task test
-task docs
+devenv tasks run project:test
+devenv tasks run project:docs
 panache format --check .
 panache lint .
 ```

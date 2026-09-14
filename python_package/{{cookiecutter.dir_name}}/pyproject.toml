@@ -43,7 +43,7 @@ docs = ["sphinx", "furo", "sphinx-copybutton", "myst-parser"]
 tests = ["pytest", "sphinx"]
 
 [dependency-groups]
-dev = ["pytest", "sphinx", "furo", "sphinx-copybutton", "myst-parser"]
+dev = ["pytest", "sphinx", "furo", "sphinx-copybutton", "myst-parser", "sphinx-autobuild"]
 
 [tool.ruff.lint]
 extend-select = [

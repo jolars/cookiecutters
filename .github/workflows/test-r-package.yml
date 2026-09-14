@@ -37,6 +37,9 @@ jobs:
         run: |
           test -f AGENTS.md
           test -f devenv.yaml
+          test -f devenv.nix
+          test ! -e Taskfile.yml
+          test ! -e Makefile
           test -f panache.toml
           test -f versionary.jsonc
           test -f .github/workflows/R-CMD-check.yml

@@ -12,3 +12,14 @@ coverage](https://codecov.io/gh/{{cookiecutter.github_user}}/{{cookiecutter.gith
 <!-- badges: end -->
 
 {{cookiecutter.package_description}}
+
+## Development
+
+Enter the development environment and run the project tasks:
+
+```console
+devenv shell
+devenv tasks run project:verify
+```
+
+Run `devenv tasks list` to see all available tasks.
