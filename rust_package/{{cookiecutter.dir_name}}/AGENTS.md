@@ -30,5 +30,6 @@ panache lint .
 - Preserve the declared Rust 1.89 minimum supported version unless a change
   explicitly requires raising it.
 - Add a regression test before fixing observable behavior.
+- Install CI toolchains with direct `rustup` commands.
 - Use Conventional Commits; Versionary derives releases from the commit history.
 - Do not edit `CHANGELOG.md` manually. Versionary owns it.

@@ -42,9 +42,12 @@ jobs:
   msrv:
     name: Rust 1.89 MSRV
     runs-on: ubuntu-latest
+    env:
+      RUSTUP_TOOLCHAIN: 1.89.0
     steps:
       - uses: actions/checkout@v7
-      - uses: dtolnay/rust-toolchain@1.89.0
+      - name: Install Rust
+        run: rustup toolchain install 1.89.0 --profile minimal
       - uses: Swatinem/rust-cache@v2
         with:
           key: msrv
